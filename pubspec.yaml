@@ -29,7 +29,7 @@ flutter_native_splash:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  pedantic: ^1.0.0
   flutter_lints: ^2.0.0
 
 flutter:
