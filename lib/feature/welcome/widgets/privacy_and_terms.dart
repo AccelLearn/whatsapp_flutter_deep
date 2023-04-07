@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_deep/common/utils/coloors.dart';
+import 'package:flutter_deep/common/extension/custom_theme_extension.dart';
 
 class PrivacyAndTerms extends StatelessWidget {
   const PrivacyAndTerms({super.key});
@@ -10,23 +10,23 @@ class PrivacyAndTerms extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 36.0),
       child: RichText(
           textAlign: TextAlign.center,
-          text: const TextSpan(
+          text: TextSpan(
               text: 'Read our',
-              style: TextStyle(color: Coloors.greyDark, height: 1.5),
+              style: TextStyle(color: context.theme.greyColor, height: 1.5),
               children: [
                 TextSpan(
                   text: ' Privacy Policy',
                   style: TextStyle(
-                    color: Coloors.greenDark,
+                    color: context.theme.circleImageColor,
                   ),
                 ),
-                TextSpan(
+                const TextSpan(
                   text: '. Tap "Agree and continue" to accept the ',
                 ),
                 TextSpan(
                   text: ' Terms of Service.',
                   style: TextStyle(
-                    color: Coloors.greenDark,
+                    color: context.theme.circleImageColor,
                   ),
                 ),
               ])),
