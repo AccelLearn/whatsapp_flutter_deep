@@ -31,6 +31,7 @@ dev_dependencies:
     sdk: flutter
   pedantic: ^1.0.0
   flutter_lints: ^2.0.0
+  country_picker: ^2.0.20
 
 flutter:
   uses-material-design: true

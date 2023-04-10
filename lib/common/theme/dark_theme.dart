@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_deep/common/extension/custom_theme_extension.dart';
 import 'package:flutter_deep/common/utils/coloors.dart';
 
@@ -8,6 +9,12 @@ ThemeData darkTheme() {
       extensions: [
         CustomThemeExtension.darkMode,
       ],
+      // 状态栏的主题设置
+      appBarTheme: const AppBarTheme(
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light),
+      ),
       colorScheme: base.colorScheme.copyWith(
         background: Coloors.backgroundDark,
       ),

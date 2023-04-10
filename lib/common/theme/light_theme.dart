@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_deep/common/extension/custom_theme_extension.dart';
 import 'package:flutter_deep/common/utils/coloors.dart';
 
@@ -8,6 +9,11 @@ ThemeData lightTheme() {
       extensions: [
         CustomThemeExtension.lightMode,
       ],
+      appBarTheme: const AppBarTheme(
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.dark),
+      ),
       colorScheme: base.colorScheme.copyWith(
         background: Coloors.backgroundLight,
       ),
